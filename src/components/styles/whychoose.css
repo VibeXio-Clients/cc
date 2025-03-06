@@ -1,0 +1,128 @@
+/* Main container */
+.why-choose-container {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 50px 30px;
+  text-align: left;
+  margin: 0px auto;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover effect */
+.why-choose-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading with an animated underline */
+.why-choose-heading {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 2.5rem;
+  color: #ff9800;
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* Underline effect */
+.why-choose-heading::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #ff9800;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+/* Gradient text effect */
+.why-choose-heading span {
+  background: linear-gradient(90deg, #ff9800, #ffcc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* List styling */
+.why-choose-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual list items */
+.why-choose-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.why-choose-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+/* Animated Check Symbol */
+.check-symbol {
+  font-size: 1.5rem;
+  color: #4caf50; /* Green color */
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate check symbol on hover */
+.why-choose-item:hover .check-symbol {
+  transform: rotate(360deg);
+}
+
+/* Bold text */
+.why-choose-item strong {
+  color: #ffcc80;
+  font-weight: bold;
+}
+
+/* Description text */
+.why-choose-item div {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-choose-container {
+      padding: 30px;
+  }
+
+  .why-choose-heading {
+      font-size: 2rem;
+  }
+
+  .why-choose-item {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-container {
+      padding: 20px;
+  }
+
+  .why-choose-heading {
+      font-size: 1.7rem;
+  }
+
+  .check-symbol {
+      font-size: 1.2rem;
+  }
+
+  .why-choose-item {
+      font-size: 0.9rem;
+      padding: 12px;
+  }
+}

@@ -1,0 +1,121 @@
+.email-security {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1000px;
+  line-height: 1.6;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.email-security h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.email-security h1 span {
+  font-size: 48px;
+  color: #f39c12;
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+.email-security p {
+  text-align: left;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #555;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.email-security ol {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 32px;
+}
+
+.email-security li {
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.email-security li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.email-security li:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.email-security li:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.email-security li:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.email-security h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.email-security h2:hover {
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+.email-security li p {
+  font-size: 24px;
+  margin: 0;
+  color: #555;
+  animation: slideIn 1s ease-in-out forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+.email-security li:hover p {
+  transform: scale(1.05);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Add hover animations for enhanced interactivity */
+.email-security li:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}

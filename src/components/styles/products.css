@@ -1,0 +1,212 @@
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ================================ */
+/* 🌟 Product Section Container */
+/* ================================ */
+.products-container {
+  animation: backgroundAnimation 8s linear infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 80px;
+  font-family: "Poppins", Arial, sans-serif;
+  gap: 60px;
+  color: #fff;
+  text-align: center;
+}
+
+.products-container:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ================================ */
+/* 🔹 Title Styling */
+/* ================================ */
+.products-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #ffcc80, #ffab40);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade-in 1.2s ease-in-out forwards;
+}
+
+.products-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffcc80, #ffab40);
+  border-radius: 2px;
+}
+
+/* ================================ */
+/* 📦 Product List Styling */
+/* ================================ */
+.products-list {
+  max-width: 800px;
+  padding: 10px 150px;
+  border-radius: 15px;
+  background: url("/public/assets/products-background.png") no-repeat center center/cover;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+  animation: slide-in-right 1s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.products-list:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Headings */
+.products-list h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffcc80, #ffab40);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔹 List Styling */
+.products-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 22px;
+}
+
+.products-list ul li {
+  margin-bottom: 15px;
+  padding-left: 35px;
+  position: relative;
+  font-size: 22px;
+  font-weight: 700;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: white;
+}
+
+.products-list ul li:hover {
+  transform: translateX(8px);
+  color: #ffcc80;
+}
+
+/* 🔹 Custom List Bullet */
+.products-list ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-30%);
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(90deg, #ffcc80, #ffab40);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 204, 128, 0.6);
+  transition: transform 0.3s ease-in-out;
+}
+
+.products-list ul li:hover::before {
+  transform: scale(1.3);
+}
+
+/* ================================ */
+/* 🔹 Responsive Design */
+/* ================================ */
+@media (max-width: 1024px) {
+  .products-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 40px;
+    height: auto;
+  }
+
+  .products-title {
+    font-size: 3rem;
+  }
+
+  .products-list {
+    padding: 40px;
+    max-width: 90%;
+  }
+
+  .products-list h3 {
+    font-size: 26px;
+  }
+
+  .products-list ul li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    padding: 30px 20px;
+  }
+
+  .products-title {
+    font-size: 2.5rem;
+  }
+
+  .products-list {
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  .products-list h3 {
+    font-size: 24px;
+  }
+
+  .products-list ul li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 20px;
+  }
+
+  .products-title {
+    font-size: 2rem;
+  }
+
+  .products-list {
+    padding: 20px;
+  }
+
+  .products-list h3 {
+    font-size: 20px;
+  }
+
+  .products-list ul li {
+    font-size: 14px;
+  }
+}

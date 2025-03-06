@@ -1,0 +1,157 @@
+.about-us-container { 
+  background: linear-gradient(135deg, #9b5de5, #f15bb5);
+  padding: 80px 100px;
+  text-align: center;
+  min-height: 650px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 10s infinite alternate ease-in-out;
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #2c5263, #264754, #4d91af);
+  }
+  100% {
+    background: linear-gradient(135deg, #4d91af, #264754, #2c5263);
+  }
+}
+
+.about-us-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+.about-us-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* 🟣 Neon Glassmorphism Text Box */
+.about-us-text {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  line-height: 1.8;
+  color: #fff;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+/* 🟣 Neon Glow Hover Effect */
+.about-us-text:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* ✨ Floating Glow Effect */
+.about-us-text::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  top: -20px;
+  left: -20px;
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: floatingGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes floatingGlow {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(20px, 20px);
+  }
+}
+
+/* 🔹 Interactive Image Section */
+.about-us-image img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.8s ease-in-out forwards;
+}
+
+/* Parallax Hover Effect */
+.about-us-image img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 Animation for Heading & Content */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .about-us-content {
+      flex-direction: column;
+  }
+
+  .about-us-heading {
+      font-size: 2.5rem;
+      text-align: center;
+  }
+
+  .about-us-text {
+      font-size: 1.2rem;
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-heading {
+      font-size: 2rem;
+  }
+
+  .about-us-text {
+      font-size: 1rem;
+      padding: 20px;
+  }
+
+  .about-us-image img {
+      max-width: 100%;
+  }
+}

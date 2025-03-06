@@ -1,0 +1,230 @@
+/* Base container styling */
+.partners-container {
+  text-align: center;
+  margin: 0px auto;
+  background: transparent !important;
+  
+}
+
+/* Header styling with animated gradient */
+.partners-header {
+  background: linear-gradient(90deg, #000428, #004e92);
+  padding: 14px 220px;
+  border-radius: 14px;
+  display: inline-block;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: slideDown 1s ease-in-out, gradientShift1 5s infinite alternate;
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.5), 
+              0px 0px 25px rgba(0, 123, 255, 0.2) inset;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Add glowing animated border */
+.partners-header::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #ff3cac, #562b7c, #2b86c5);
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(10px);
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Pulsing glow effect */
+.partners-header:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 123, 255, 0.7), 
+              0px 0px 30px rgba(0, 123, 255, 0.3) inset;
+}
+
+/* Make the gradient shift smoothly */
+@keyframes gradientShift1 {
+  0% {
+      background: linear-gradient(90deg, #000428, #004e92);
+  }
+  50% {
+      background: linear-gradient(90deg, #004e92, #00c6ff);
+  }
+  100% {
+      background: linear-gradient(90deg, #000428, #004e92);
+  }
+}
+
+
+.partners-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+/* Logos grid */
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  animation: fadeInGrid 1s ease-in-out;
+}
+
+/* Partner card with Glassmorphism */
+.partner-card {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 90px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: scaleUp 0.6s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect - Glow */
+.partner-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 25px rgba(0, 123, 255, 0.5);
+}
+
+.partner-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.2), transparent);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.partner-card:hover::before {
+  opacity: 1;
+}
+
+/* Partner logos with bounce effect */
+.partner-logo {
+  max-width: 110px;
+  height: auto;
+  object-fit: contain;
+  animation: logoBounce 2s infinite alternate ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .partners-header h2 {
+      font-size: 1.6rem;
+  }
+
+  .partners-header {
+      padding: 12px 120px;
+  }
+
+  .partner-card {
+      padding: 12px;
+  }
+
+  .partner-logo {
+      max-width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-header h2 {
+      font-size: 1.3rem;
+  }
+
+  .partners-header {
+      padding: 12px 60px;
+  }
+
+  .partner-logo {
+      max-width: 70px;
+  }
+}
+
+/* Background gradient animation */
+@keyframes gradientFlow {
+  0% {
+      background-position: left;
+  }
+  100% {
+      background-position: right;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInGrid {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Subtle bounce effect for logos */
+@keyframes logoBounce {
+  0% {
+      transform: translateY(0px);
+  }
+  100% {
+      transform: translateY(-8px);
+  }
+}
