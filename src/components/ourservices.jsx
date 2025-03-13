@@ -9,12 +9,6 @@ function App() {
 
   const services = [
     {
-      title: "Cloud Labs",
-      icon: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvdWQlMjBjb21wdXRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-      path: "/cloud-labs",
-      items: ["Microsoft Azure", "Amazon Web Services", "Google Cloud", "Private Cloud", "Virtual Labs"],
-    },
-    {
       title: "Mail and Collaborations",
       icon: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZW1haWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       path: "/mail-collaboration",

@@ -5,7 +5,7 @@ const BackupIdentity = () => {
   return (
     <div className="backup-identity">
       <h1>
-        Backup & Identity Management <span>💾🔑</span>
+        Backup & Identity Management 
       </h1>
       <p>
         Acronis provides secure cloud backup solutions to protect critical

@@ -3,10 +3,10 @@ import "./styles/partners.css";
 
 const Partners = () => {
   const partners = [
-    { name: "Microsoft", logo: "/assets/micro.webp" },
-    { name: "AWS", logo: "/assets/AWS.webp" },
-    { name: "Cisco", logo: "/assets/cisco.webp" },
-    { name: "Fortinet", logo: "/assets/forti.webp" },
+    { name: "Microsoft", logo: "/assets/micro.png" },
+    { name: "AWS", logo: "/assets/AWS.png" },
+    { name: "Cisco", logo: "/assets/cisco.png" },
+    { name: "Fortinet", logo: "/assets/forti.png" },
   ];
 
   return (

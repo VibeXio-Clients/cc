@@ -6,6 +6,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .services-container::before {
@@ -33,7 +34,7 @@
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 15px;
-  background: linear-gradient(90deg, #000428, #004e92);
+  background-image: linear-gradient(to right, #ff9800, #ffcc80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
@@ -41,6 +42,7 @@
   position: relative;
   display: inline-block;
 }
+
 
 .services-heading::after {
   content: "";
@@ -50,7 +52,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #004e92, #00c6ff);
+  background-image: linear-gradient(to right,#ff9800, #ffcc80);
   border-radius: 2px;
 }
 
@@ -85,6 +87,11 @@
   animation: fadeInCard 0.8s ease-out forwards;
   cursor: pointer;
   height: 100%;
+  justify-content: center;
+}
+.service-card:nth-child(7) {
+  position: relative;
+  left: 476px;
 }
 
 .service-card-inner {
@@ -172,13 +179,13 @@
   font-size: 1.6rem;
   font-weight: 700;
   margin: 20px 0 15px;
-  color: #004e92;
+  color: #7ec3ff;
   transition: all 0.3s ease;
   padding: 0 20px;
 }
 
 .service-card.active .service-title {
-  color: #00c6ff;
+  color: #003f88;
   transform: scale(1.05);
 }
 
@@ -196,7 +203,7 @@
   align-items: center;
   margin: 12px 0;
   font-size: 1rem;
-  color: #333;
+  color: white;
   opacity: 0;
   transform: translateX(20px);
   animation: fadeInListItem 0.5s ease-in-out forwards;
@@ -214,7 +221,7 @@
 
 .service-card.active .service-list li {
   transform: translateX(5px);
-  color: #000;
+  color: white;
 }
 
 /* Button Style */
@@ -239,6 +246,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 78, 146, 0.3);
+  margin-bottom: 30px;
 }
 
 .button-icon {
@@ -352,7 +360,6 @@
 .service-card:nth-child(5) { animation-delay: 0.5s; }
 .service-card:nth-child(6) { animation-delay: 0.6s; }
 .service-card:nth-child(7) { animation-delay: 0.7s; }
-.service-card:nth-child(8) { animation-delay: 0.8s; }
 
 /* Responsive Design */
 @media (max-width: 1200px) {

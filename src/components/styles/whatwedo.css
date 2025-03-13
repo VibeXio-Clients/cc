@@ -1,6 +1,5 @@
 body{
-  
-  background: linear-gradient(135deg, #80deea, #b2ebf2, #e0f7fa);
+  background-image: linear-gradient(to bottom, #2a2e30, #1e3745, #083e5c, #004474, #00478b, #3c4998, #6348a1, #8844a4, #b64198, #d94686, #f15771, #fd705c);
 }
 @keyframes backgroundAnimation {
   0% {
@@ -22,6 +21,7 @@ body{
   overflow: hidden;
   animation: backgroundAnimation 10s ease infinite;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .what-we-do-container:hover {
@@ -39,6 +39,7 @@ body{
   width: 100%;
   max-width: 550px;
   height: auto;
+  background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
@@ -57,26 +58,34 @@ body{
 }
 
 .text-section h2 {
-  font-family: "Arial, sans-serif";
-  font-size: 44px;
-  color: #005662;
-  font-weight: 700;
-  margin-bottom: 18px;
-  opacity: 0;
-  animation: fade-in 1.5s ease-in-out forwards;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  background-image: linear-gradient(to right, #ff9800, #ffcc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+.text-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-image: linear-gradient(to right, #ff9800, #ffcc80);
+  border-radius: 2px;
 }
 
-.text-section h2 span {
-  color: #007BFF; /* Highlight color */
-  text-decoration: underline;
-}
 
 .text-section p {
   font-family: "Arial, sans-serif";
   font-size: 24px;
-  color: #444;
+  color: #ffffff;
   line-height: 1.7;
   margin-top: 12px;
   opacity: 0;

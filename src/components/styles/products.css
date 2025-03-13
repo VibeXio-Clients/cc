@@ -1,212 +1,202 @@
-@keyframes backgroundAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slide-in-right {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-/* ================================ */
-/* 🌟 Product Section Container */
-/* ================================ */
+/* 🌟 Enhanced Gradient Background Animation */
 .products-container {
-  animation: backgroundAnimation 8s linear infinite;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 80px;
-  font-family: "Poppins", Arial, sans-serif;
-  gap: 60px;
-  color: #fff;
+  padding: 80px 100px;
   text-align: center;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.products-container:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease-in-out;
-}
-
-/* ================================ */
-/* 🔹 Title Styling */
-/* ================================ */
-.products-title {
+/* 🔹 Title Styling with Glowing Effect */
+.products-title {  
   font-family: "Poppins", sans-serif;
-  font-size: 36px;
-  font-weight: 800;
+  font-size: 3.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 3px;
   position: relative;
   display: inline-block;
-  background: linear-gradient(90deg, #ffcc80, #ffab40);
+  background-image: linear-gradient(to right, #ff9800, #ffcc80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: fade-in 1.2s ease-in-out forwards;
 }
 
+
+/* 🟣 Subtle Divider Line */
 .products-title::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -10px;
+  top: 190px;
   transform: translateX(-50%);
-  width: 100px;
+  width: 120px;
   height: 4px;
-  background: linear-gradient(90deg, #ffcc80, #ffab40);
+  background-image: linear-gradient(to right, #ff9800, #ffcc80);
   border-radius: 2px;
+  animation: shimmer 2s infinite linear;
 }
 
-/* ================================ */
-/* 📦 Product List Styling */
-/* ================================ */
+
+/* 🌟 Content Layout */
+.products-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* 🟣 Neon Glassmorphism Text Box */
 .products-list {
-  max-width: 800px;
-  padding: 10px 150px;
-  border-radius: 15px;
-  background: url("/public/assets/products-background.png") no-repeat center center/cover;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 35px 45px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #fff;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-  animation: slide-in-right 1s ease-in-out;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.products-list:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-}
-
-/* 🔹 Headings */
-.products-list h3 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #ffcc80, #ffab40);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* 🔹 List Styling */
-.products-list ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 22px;
-}
-
-.products-list ul li {
-  margin-bottom: 15px;
-  padding-left: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   position: relative;
-  font-size: 22px;
-  font-weight: 700;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  color: white;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-in-out forwards;
 }
 
-.products-list ul li:hover {
-  transform: translateX(8px);
-  color: #ffcc80;
+/* 🟣 Bullet Points Styling */
+.products-list ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-/* 🔹 Custom List Bullet */
-.products-list ul li::before {
-  content: '';
+.products-list li {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.products-list li::before {
+  content: "⚡";
   position: absolute;
   left: 0;
-  top: 30%;
-  transform: translateY(-30%);
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(90deg, #ffcc80, #ffab40);
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(255, 204, 128, 0.6);
+  top: 0;
+  font-size: 1.5rem;
+  color: #ff6600;
   transition: transform 0.3s ease-in-out;
 }
 
-.products-list ul li:hover::before {
-  transform: scale(1.3);
+.products-list li:hover {
+  transform: translateX(10px);
+  color: #ffcc00;
 }
 
-/* ================================ */
-/* 🔹 Responsive Design */
-/* ================================ */
-@media (max-width: 1024px) {
-  .products-container {
+.products-list li:hover::before {
+  transform: rotate(15deg);
+  color: #ff0000;
+}
+
+/* 🟣 Interactive Hover Effects */
+.products-list:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
+}
+
+/* ✨ Floating Glow Effect */
+.products-list::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 102, 0, 0.4);
+  top: -20px;
+  left: -20px;
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: floatingGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes floatingGlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+/* 🎭 Interactive Image Section */
+.products-image img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.8s ease-in-out forwards;
+}
+
+/* 🎭 Interactive Hover Effect */
+.products-image img:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 🎭 Animation for Heading & Content */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .products-content {
     flex-direction: column;
-    text-align: center;
-    padding: 50px 40px;
-    height: auto;
   }
 
   .products-title {
     font-size: 3rem;
+    text-align: center;
   }
 
   .products-list {
-    padding: 40px;
-    max-width: 90%;
+    font-size: 1.4rem;
+    padding: 30px;
   }
 
-  .products-list h3 {
-    font-size: 26px;
-  }
-
-  .products-list ul li {
-    font-size: 18px;
+  .products-image img {
+    max-width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .products-container {
-    padding: 30px 20px;
-  }
-
+@media (max-width: 480px) {
   .products-title {
     font-size: 2.5rem;
   }
 
   .products-list {
+    font-size: 1.2rem;
+    padding: 25px;
+  }
+
+  .products-image img {
     max-width: 100%;
-    padding: 30px;
-  }
-
-  .products-list h3 {
-    font-size: 24px;
-  }
-
-  .products-list ul li {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .products-container {
-    padding: 20px;
-  }
-
-  .products-title {
-    font-size: 2rem;
-  }
-
-  .products-list {
-    padding: 20px;
-  }
-
-  .products-list h3 {
-    font-size: 20px;
-  }
-
-  .products-list ul li {
-    font-size: 14px;
   }
 }

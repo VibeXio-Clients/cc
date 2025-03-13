@@ -5,7 +5,7 @@ const InfrastructureSolutions = () => {
   return (
     <div className="infrastructure-solutions">
       <h1>
-        Infrastructure Solutions <span>🏢💻</span>
+        Infrastructure Solutions 
       </h1>
       <p>
         We provide enterprise-grade servers, networking devices, and storage solutions to meet business demands.

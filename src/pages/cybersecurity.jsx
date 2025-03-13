@@ -5,7 +5,7 @@ const Cybersecurity = () => {
   return (
     <div className="cybersecurity">
       <h1>
-        Cybersecurity <span>🛡️</span>
+        Cybersecurity 
       </h1>
       <p>
         We provide robust cybersecurity solutions to safeguard businesses against evolving digital threats.

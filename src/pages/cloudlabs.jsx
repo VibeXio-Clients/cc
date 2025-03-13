@@ -5,7 +5,7 @@ const CloudLabs = () => {
   return (
     <div className="cloud-labs">
       <h1>
-        Cloud Labs <span>🌩️</span>
+        Cloud Labs
       </h1>
       <p>
         Our Cloud Labs provide hands-on environments for businesses, developers, and IT professionals to test, train, and deploy solutions on leading cloud platforms.

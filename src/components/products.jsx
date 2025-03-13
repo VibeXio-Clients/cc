@@ -4,10 +4,10 @@ import "./styles/products.css";
 const Products = () => {
   return (
     <section id="products-section" className="products-container">
-      <div className="products-container">
         <div className="products-title">
           <h2>Products</h2>
         </div>
+        <div className="products-content">
         <div className="products-list">
           <h3>Infrastructure Solutions</h3>
           <ul> {/* Changed from <ol> to <ul> */}
@@ -19,6 +19,9 @@ const Products = () => {
             <li>IP PX</li>
             <li>Video Audio Conferencing System</li>
           </ul>
+        </div>
+        <div className="products-image">
+          <img src="/assets/products-background.png" alt="Product Image"/>
         </div>
       </div>
     </section>

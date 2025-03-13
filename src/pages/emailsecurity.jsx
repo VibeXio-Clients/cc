@@ -5,7 +5,7 @@ const EmailSecurity = () => {
   return (
     <div className="email-security">
       <h1>
-        Email Security <span>🔐</span>
+        Email Security
       </h1>
       <p>
         Protect your business from cyber threats, phishing, and email-based attacks with our advanced security solutions.

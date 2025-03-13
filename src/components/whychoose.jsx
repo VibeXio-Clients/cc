@@ -24,7 +24,7 @@ const WhyChoose = () => {
   return (
     <div className="why-choose-container">
       <div className="why-choose-heading">
-        Why Choose CloudCave?
+        Why Choose CloudCave
       </div>
       <ul className="why-choose-list">
         {points.map((point, index) => (

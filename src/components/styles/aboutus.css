@@ -1,5 +1,4 @@
 .about-us-container { 
-  background: linear-gradient(135deg, #9b5de5, #f15bb5);
   padding: 80px 100px;
   text-align: center;
   min-height: 650px;
@@ -19,10 +18,6 @@
 }
 
 .about-us-heading {
-  font-family: "Poppins", sans-serif;
-  font-size: 50px;
-  font-weight: 800;
-  color: #fff;
   margin-bottom: 40px;
   text-align: left;
   text-transform: uppercase;
@@ -33,6 +28,26 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1.2s ease-in-out forwards;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  position: relative;
+  background-image: linear-gradient(to right, #ff9800, #ffcc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-us-heading::after{
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  top: 100px;
+  margin-left: -180px;
+  background-image: linear-gradient(to right, #ff9800, #ffcc80);
+  border-radius: 2px;
+  animation: shimmer 2s infinite linear;
 }
 
 .about-us-content {

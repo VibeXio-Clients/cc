@@ -6,7 +6,7 @@ const WhatWeDo = () => {
     <div className="what-we-do-container">
       <div className="image-section">
         <img
-          src="/assets/what-we-do.webp"
+          src="/assets/what-we-do.png"
           alt="Cloud Solutions"
           className="what-we-do-image"
         />

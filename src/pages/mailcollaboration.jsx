@@ -5,7 +5,7 @@ const MailCollaboration = () => {
   return (
     <div className="mail-collaboration">
       <h1>
-        Mail & Collaboration <span>📧</span>
+        Mail & Collaboration 
       </h1>
       <p>
         Enable seamless business communication and collaboration with our secure and efficient email solutions.

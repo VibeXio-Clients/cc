@@ -18,6 +18,7 @@ import WebAppDevelopment from './pages/webdevelopment';
 import BackupIdentity from './pages/backupidentity';
 import InfrastructureSolutions from './pages/infrastructuresolutions';
 import CloudConsultingSolutions from './pages/cloudconsulting';
+import CloudLabsMain from './components/cloudlabsmain';
 function App() {
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
             <>
               <HomeImage />
               <WhatWeDo />
+              <CloudLabsMain/>
               <Products />
               <Services />
               <Partners />

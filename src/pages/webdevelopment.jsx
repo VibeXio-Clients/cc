@@ -5,7 +5,7 @@ const WebAppDevelopment = () => {
   return (
     <div className="web-app-development">
       <h1>
-        Web & App Development <span>🌍📱</span>
+        Web & App Development
       </h1>
       <p>
         We create secure, scalable, and high-performance web and mobile

@@ -3,8 +3,8 @@
   text-align: center;
   margin: 0px auto;
   background: transparent !important;
-  
-}
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
 
 /* Header styling with animated gradient */
 .partners-header {
@@ -62,7 +62,7 @@
 
 .partners-header h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 52px;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -87,8 +87,8 @@
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 15px 90px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;  
+  background: white;
   backdrop-filter: blur(15px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -122,7 +122,7 @@
 
 /* Partner logos with bounce effect */
 .partner-logo {
-  max-width: 110px;
+  max-width: 130px;
   height: auto;
   object-fit: contain;
   animation: logoBounce 2s infinite alternate ease-in-out;

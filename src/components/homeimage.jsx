@@ -5,7 +5,7 @@ const HomeImage = () => {
   return (
     <div className="homeimage">
       <img
-        src="/assets/homeimage.webp"
+        src="/assets/homeimage.png"
         alt="Digital Transformation Illustration"
         className="hero-image"
       />
