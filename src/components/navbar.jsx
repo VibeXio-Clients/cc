@@ -5,6 +5,7 @@ import "./styles/navbar.css";
 const Navbar = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,14 +24,31 @@ const Navbar = () => {
     <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="logo-section">
         <img src="/assets/logo.png" alt="CloudCave Logo" className="logo" />
+        <div
+          className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </div>
-      <div className="nav-links">
+
+      <div className={`nav-links ${isMobileMenuOpen ? "open" : ""}`}>
         <div className="center-links">
           <a href="/">Home</a>
-          <ScrollLink to="about-us-section" smooth={true} duration={500} offset={-70}>
-            About us
+          <ScrollLink to="about-us-section" smooth={true} duration={500} offset={-70} onClick={() => {
+              if (window.location.pathname !== "/") {
+              window.location.href = "/#about-us-section";
+              }
+              }}>
+             About us
           </ScrollLink>
-          <ScrollLink to="products-section" smooth={true} duration={500} offset={-70}>
+          <ScrollLink to="products-section" smooth={true} duration={500} offset={-70} onClick={() => {
+              if (window.location.pathname !== "/") {
+              window.location.href = "/#products-section";
+              }
+            }}>
             Products
           </ScrollLink>
           <div

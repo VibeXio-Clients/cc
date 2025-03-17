@@ -37,10 +37,10 @@ function App() {
               <StatsSection />
               <WhyChoose />
               <AboutUs />
-              <Footer />
-            </>
+            </> 
           }
         />
+        
         <Route path="/cloud-labs" element={<CloudLabs />} />
         <Route path="/mail-collaboration" element={<MailCollaboration/>}/>
         <Route path="/email-security" element={<EmailSecurity/>}/>
@@ -50,6 +50,7 @@ function App() {
         <Route path="/infrastructure-solutions" element={<InfrastructureSolutions/>}/>
         <Route path="/cloud-consulting" element={<CloudConsultingSolutions/>}/>
       </Routes>
+      <Footer />
     </Router>
   );
 }
