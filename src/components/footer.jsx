@@ -32,7 +32,7 @@ const Footer = () => {
         {/* Contact Section */}
         <div className="footer-column">
           <h3 className="footer-heading">Contact</h3>
-          <p>sales@cloudcavetech.com</p>
+          <a href="mailto:sales@cloudcavetech.com">sales@cloudcavetech.com</a>
           <p>+91 99002 58874</p>
 
           {/* Social Media Links */}

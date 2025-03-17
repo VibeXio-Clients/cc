@@ -91,7 +91,7 @@
 }
 .service-card:nth-child(7) {
   position: relative;
-  left: 476px;
+  grid-column: 2 / 3; /* Places it in the center column */
 }
 
 .service-card-inner {
@@ -366,6 +366,13 @@
   .services-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
+}
+@media (max-width: 1024px) {
+  .service-card:nth-child(7) {
+    grid-column: 1 / -1; 
+    justify-self: center; 
+    
+}
 }
 
 @media (max-width: 768px) {
