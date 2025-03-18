@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import "./styles/navbar.css";
+import { Link } from "react-router-dom"; 
 
 const Navbar = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -23,8 +24,10 @@ const Navbar = () => {
   return (
     <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="logo-section">
-        <img src="/assets/logo.png" alt="CloudCave Logo" className="logo" />
-        <div
+      <Link to="/" className="logo-link" onClick={() => window.scrollTo(0, 0)}>
+          <img src="/assets/logo.png" alt="CloudCave Logo" className="logo" />
+        </Link>
+      <div
           className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
