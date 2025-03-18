@@ -19,9 +19,11 @@ import BackupIdentity from './pages/backupidentity';
 import InfrastructureSolutions from './pages/infrastructuresolutions';
 import CloudConsultingSolutions from './pages/cloudconsulting';
 import CloudLabsMain from './components/cloudlabsmain';
+import ScrollToTop from './components/scrolltotop'; 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route

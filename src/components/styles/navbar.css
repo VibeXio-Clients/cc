@@ -106,7 +106,6 @@ a::after {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #f1653b;
   transition: all 0.4s ease-in-out;
   transform: translateX(-50%);
 }
